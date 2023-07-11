@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <nav class="navbar bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/logo.png"
+            alt="Logo Pokedex"
+            width="75%"
+            height="75%"
+            style="margin: auto"
+          />
+        </a>
+      </div>
+    </nav>
+    <button type="button" class="adc btn btn-primary" onclick="btnAdicionar()">
+      Adicionar
+    </button>
+
+    <button type="button" class="alt btn btn-success" onclick="btnAlterar()">
+      Alterar
+    </button>
+
+    <button type="button" class="del btn btn-danger" onclick="btnDeletar()">
+      Deletar
+    </button>
+    <div class="container">
+      <form
+        class="adicionar"
+        id="adicionar"
+        action="adicionar.php"
+        method="GET"
+        style="display: none"
+      >
+        <h6 class="display-6" style="text-align: center">Adicionar</h6>
+        Nome: <input type="text" name="nm_pokemon" />
+        <br />
+        <br />
+        Tipo 1: <input type="text" name="ds_tipo1" /> Tipo 2:
+        <input type="text" name="ds_tipo2" /> Imagem:
+        <input type="text" name="url_img" />
+        <input
+          id="botao"
+          type="submit"
+          class="btn btn-primary"
+          value="Cadastrar"
+        />
+      </form>
+
+      <form
+        id="alterar"
+        class="alterar"
+        action="alterar.php"
+        method="GET"
+        style="display: none"
+      >
+        <h6 class="display-6" style="text-align: center">Alterar</h6>
+        <br /><br />
+        Nome: <input type="text" name="nm_pokemon" /> <br /><br />
+        Insira o ID do pokemon que deseja ALTERAR:
+        <input type="number" name="cd_pokemon" /> <br /><br />
+        Tipo 1: <input type="text" name="ds_tipo1" /> Tipo 2:
+        <input type="text" name="ds_tipo2" /> Imagem:
+        <input type="text" name="url_img" />
+        <input
+          id="botao"
+          type="submit"
+          class="btn btn-primary"
+          value="Alterar"
+        />
+      </form>
+
+      <form
+        id="deletar"
+        class="deletar"
+        action="deletar.php"
+        method="POST"
+        style="display: none"
+      >
+        <h6 class="display-6" style="text-align: center">Deletar</h6>
+        Insira o ID do pokemon que deseja DELETAR:
+        <input type="number" name="cd_pokemon" />
+        <input
+          id="botao"
+          type="submit"
+          class="btn btn-primary"
+          value="DELETAR"
+        />
+      </form>
+
+      <br />
+
+      <form method="post" action="index.php" style="text-align: center">
+        <button type="submit" aria-label="Pokedex" style="border: none; background-color: rgba(0, 0, 0, 0);">
+          <img src="img/pokedex.png" style="width: 30%" />
+        </button>
+      </form>
+      <h1 style="text-align: center" class="display-5">Verificar Pokedex</h1>
+    </div>
+  </body>
+</html>

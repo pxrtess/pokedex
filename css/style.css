@@ -1,0 +1,47 @@
+.adicionar{
+    background-color: blue;
+    margin-top: 30px;
+}
+.deletar{
+    background-color: red;
+    margin-top: 30px;
+}
+.alterar{
+    background-color: green;
+    margin-top: 30px;
+}
+#botao {
+    margin-left: 10px;
+}
+form {
+    padding: 15px;
+    margin: auto;
+    color: white;
+    border-radius: 0.7em;
+}
+.adc{
+    margin-left: 20%;
+    margin-top: 30px;
+}
+.alt{
+    margin-top: 30px;
+}
+.del{
+    margin-top: 30px;
+}
+.pokemons{
+    display: flex;
+    margin-top: 20px;
+    flex: wrap;
+}
+.card{
+    width: 10em;
+}
+.card img{
+    margin-inline: auto;
+    width: 80%;
+    margin-top: 2em;
+}
+li {
+    text-decoration: none;
+}
